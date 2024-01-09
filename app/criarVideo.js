@@ -2,7 +2,7 @@ import { conexaoApi } from "./conexaoApi.js"
 
 const formulario = document.querySelector("[data-formulario]")
 
-function criaVideo(evento){
+async function criarVideo(evento){
   evento.preventDefault()
 
   const imagem = document.querySelector("[data-imagem]").value
@@ -10,7 +10,9 @@ function criaVideo(evento){
   const titulo = document.querySelector("[data-titulo]").value
   const descricao = Math.floor(Math.random()*10).toString()
   
-  conexaoApi.criaVideo(titulo, descricao, url, imagem)
+  await conexaoApi.criaVideo(titulo, descricao, url, imagem)
+
+  window.location.href = '../pages/envio-concluido.html'  // redireciona para a pagina de conclusao
 }
 
-formulario.addEventListener('submit', evento => criaVideo(evento))
+formulario.addEventListener('submit', evento => criarVideo(evento))
