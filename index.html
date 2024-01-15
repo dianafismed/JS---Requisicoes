@@ -16,8 +16,8 @@
   <nav class="cabecalho">
     <a class="logo" href="./index.html"></a>
     <div class="cabecalho__pesquisar">
-      <input type="search" placeholder="Pesquisar" id="pesquisar" class="pesquisar__input">
-      <button class="pesquisar__botao">
+      <input type="search" placeholder="Pesquisar" id="pesquisar" class="pesquisar__input" data-pesquisa>
+      <button class="pesquisar__botao" data-botao-pesquisa="">
     </div>
     <div class="cabecalho__icones">
       <a href="./pages/enviar-video.html" class="cabecalho__videos"></a>
@@ -28,5 +28,6 @@
 <ul class="videos__container" alt="videos alura" data-lista></ul>
 
 <script src="app/mostrarVideos.js" type="module"></script>
+<script src="app/buscarVideo.js" type="module"></script>
 </body>
 </html>
